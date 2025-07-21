@@ -89,44 +89,72 @@ main section {
     margin: 0 auto;
 }
 
-.feature-block {
-    margin-bottom: 3rem;
-    text-align: center;
+.feature-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
 }
 
-.feature-block img {
-    max-width: 100%;
+.card {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 1.5rem;
     border-radius: 15px;
-    margin-top: 1rem;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.feature-block img:hover {
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card img:hover {
     transform: scale(1.03);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.full-pages {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.full-pages img {
+    max-width: 45%;
+    margin: 0.5rem;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.full-pages img:hover {
+    transform: scale(1.02);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
-/* Journal Spread */
-.journal-spread {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    align-items: center;
+/* QR Code */
+.qr-code {
+    text-align: center;
     margin-top: 2rem;
-    flex-wrap: wrap;
 }
 
-.journal-spread img {
-    max-width: 45%;
+.qr-code img {
+    max-width: 150px;
     border-radius: 10px;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.journal-spread img:hover {
-    transform: scale(1.02);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+.qr-code img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 /* Footer */
@@ -137,8 +165,11 @@ footer {
 }
 
 /* Responsive */
-@media (max-width: 768px) {
-    .journal-spread img {
+@media (max-width: 600px) {
+    .feature-cards {
+        flex-direction: column;
+    }
+    .full-pages img {
         max-width: 90%;
     }
 }
