@@ -26,6 +26,11 @@ nav {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
+nav .logo {
+    height: 60px;
+    object-fit: cover;
+}
+
 nav ul {
     list-style: none;
     display: flex;
@@ -43,7 +48,7 @@ nav a:hover {
     background: linear-gradient(135deg, #ffe5ec, #fce1b3);
 }
 
-.hero h2 {
+.hero h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
 }
@@ -69,36 +74,19 @@ nav a:hover {
 
 /* About Section */
 .about {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
     padding: 3rem 2rem;
+    text-align: center;
     background-color: #fff;
 }
 
-.about-text {
-    flex: 1;
-    padding: 1rem;
-}
-
-.about-img {
-    flex: 1;
-    text-align: center;
-}
-
-.about-img img {
-    max-width: 100%;
-    border-radius: 15px;
-}
-
-/* Services Section */
-.services {
+/* Features Section */
+.features {
     background-color: #fdf6f0;
     text-align: center;
     padding: 3rem 2rem;
 }
 
-.card-container {
+.feature-cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -111,7 +99,7 @@ nav a:hover {
     padding: 2rem;
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    width: 300px;
+    width: 280px;
 }
 
 .card h3 {
@@ -126,19 +114,12 @@ nav a:hover {
     text-align: center;
 }
 
-.contact form {
-    max-width: 500px;
-    margin: 0 auto;
-    display: grid;
-    gap: 1rem;
+.shop-buttons {
+    margin-top: 1.5rem;
 }
 
-.contact input,
-.contact textarea {
-    padding: 0.8rem;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    width: 100%;
+.shop-buttons .btn {
+    margin: 0.5rem;
 }
 
 /* Footer */
@@ -151,12 +132,7 @@ footer {
 
 /* Responsive */
 @media (max-width: 768px) {
-    .about {
+    .feature-cards {
         flex-direction: column;
-    }
-
-    .card-container {
-        flex-direction: column;
-        align-items: center;
     }
 }
