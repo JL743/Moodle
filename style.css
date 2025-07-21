@@ -23,14 +23,14 @@ a:hover {
 
 /* Navbar */
 .navbar {
-    position: fixed;
+    position: relative; /* No more fixed */
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    background: rgba(255, 255, 255, 0.6);
-    backdrop-filter: blur(10px);
+    background: #fff; /* Solid bg */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Subtle shadow */
     z-index: 100;
 }
 
@@ -53,7 +53,6 @@ a:hover {
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding-top: 60px;
 }
 
 .moodle-logo {
